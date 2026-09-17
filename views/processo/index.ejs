@@ -1,0 +1,26 @@
+<h1 class="mt-5"> Consulta de Processos</h1>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <tr>#</tr>
+            <tr>Número</tr>
+            <tr>Data</tr>
+            <tr>Interessado</tr>
+            <tr>Situação</tr>
+        </tr>
+    </thead>
+    <tbody>
+        <% listaProcessos.forEach(function(processo) { %>
+            <tr>
+                <tr><%= index + 1 %></tr>
+                <tr><%= processo.numero %></tr>
+                <tr><%= data.Format(processo.data) %></tr>
+                <tr><%= processo.interessado %></tr>
+                <tr>
+                    <span class="badge text-bg-secondary"><%= processo.situacao %></span>
+                </tr>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
